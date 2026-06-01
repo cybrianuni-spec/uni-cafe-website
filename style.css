@@ -1,0 +1,213 @@
+/* ================= CSS SECTION ================= */
+/* Custom CSS proves the use of CSS in this project */
+
+:root {
+    --gold: #d6b25e;
+    --dark: #111111;
+    --soft-dark: #1d1d1d;
+    --light: #f8f9fa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 76px;
+}
+
+/* ================= Bootstrap Navbar Customization ================= */
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.nav-logo {
+    width: 55px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.navbar-brand span {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+/* ================= CSS Hero Section ================= */
+.hero-section {
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+        url("assets/front.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: -76px;
+    padding-top: 76px;
+}
+
+.welcome-text {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero-logo {
+    max-width: 330px;
+    filter: drop-shadow(0 0 20px rgba(214,178,94,.5));
+}
+
+/* ================= CSS Buttons ================= */
+.btn-gold {
+    background-color: var(--gold);
+    color: #111;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-gold:hover {
+    background-color: #c19b45;
+    color: #000;
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+/* ================= CSS Section Titles ================= */
+.section-title {
+    font-weight: 800;
+    color: #222;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 75px;
+    height: 4px;
+    background-color: var(--gold);
+    display: block;
+    margin: 12px auto 0;
+}
+
+/* ================= CSS Cards and Boxes ================= */
+.info-box,
+.feature-box,
+.tech-box {
+    padding: 25px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0,0,0,.08);
+    height: 100%;
+    transition: .4s;
+}
+
+.info-box i,
+.feature-box i,
+.tech-box i {
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.info-box:hover,
+.feature-box:hover,
+.tech-box:hover,
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card {
+    border: none;
+    transition: .4s;
+}
+
+.gallery-img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-image {
+    max-height: 750px;
+    object-fit: contain;
+}
+
+.reservation-section {
+    background:
+        linear-gradient(rgba(255,255,255,.92), rgba(255,255,255,.92)),
+        url("assets/hall.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.reservation-form {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0,0,0,.12);
+}
+
+.tech-box {
+    text-align: center;
+}
+
+.tech-box i {
+    font-size: 48px;
+}
+
+.footer {
+    background-color: #0b0b0b;
+}
+
+.footer-logo {
+    max-width: 180px;
+}
+
+/* ================= JavaScript Dark Mode Support ================= */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .bg-light {
+    background-color: #1f1f1f !important;
+}
+
+.dark-mode .section-title,
+.dark-mode .card-body,
+.dark-mode .info-box,
+.dark-mode .feature-box,
+.dark-mode .tech-box {
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .info-box,
+.dark-mode .feature-box,
+.dark-mode .tech-box,
+.dark-mode .reservation-form {
+    background-color: #222;
+}
+
+.dark-mode .reservation-section {
+    background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+        url("assets/hall.jpg");
+}
+
+/* ================= Responsive Design ================= */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-logo {
+        max-width: 240px;
+    }
+
+    .gallery-img {
+        height: 300px;
+    }
+}

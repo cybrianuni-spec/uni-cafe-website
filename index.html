@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ================= HTML: Page Info ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arab Restaurant & Cafe - Amman Arab University</title>
+
+    <!-- ================= BOOTSTRAP: CSS Library ================= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ================= ICONS: Font Awesome ================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ================= CSS: Custom External CSS ================= -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ================= HTML + BOOTSTRAP: Navigation Bar ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                <img src="assets/logo.png" alt="Arab Cafe Logo" class="nav-logo">
+                <span>Arab Restaurant & Cafe</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- ================= JAVASCRIPT: Dark Mode Button ================= -->
+                <button class="btn btn-gold ms-lg-3" onclick="toggleDarkMode()">Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HTML + CSS: Hero Section ================= -->
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7 text-white">
+                    <p class="welcome-text">Inside Amman Arab University - Building I</p>
+                    <h1 class="display-4 fw-bold">Arab Restaurant & Cafe</h1>
+                    <p class="lead">
+                        A university restaurant and cafe serving meals, hot coffee, iced drinks, sandwiches, and student-friendly options.
+                    </p>
+                    <a href="#menu" class="btn btn-gold btn-lg me-2">View Menu</a>
+                    <a href="#reservation" class="btn btn-outline-light btn-lg">Book Now</a>
+                </div>
+
+                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                    <img src="assets/logo.png" class="hero-logo" alt="Arab Cafe Logo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HTML: About Section ================= -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <img src="assets/front.png" class="img-fluid rounded shadow" alt="Arab Cafe Front">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Arab Cafe</h2>
+                    <p>
+                        Arab Restaurant & Cafe is located inside <strong>Amman Arab University</strong>, specifically in <strong>Building I</strong>.
+                        It is designed to serve students and university staff with meals, drinks, and a comfortable indoor place.
+                    </p>
+
+                    <div class="row g-3 mt-3">
+                        <div class="col-sm-6">
+                            <div class="info-box">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <h5>University</h5>
+                                <p>Amman Arab University</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-box">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h5>Location</h5>
+                                <p>Building I</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-box">
+                                <i class="fa-solid fa-clock"></i>
+                                <h5>Working Hours</h5>
+                                <p>8:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-box">
+                                <i class="fa-solid fa-truck"></i>
+                                <h5>Delivery</h5>
+                                <p>Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= BOOTSTRAP: Image Gallery Grid ================= -->
+            <div class="row g-4 mt-5">
+                <div class="col-md-6">
+                    <img src="assets/drink.webp" class="img-fluid rounded gallery-img" alt="Arab Cafe Drink">
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/hall.jpg" class="img-fluid rounded gallery-img" alt="University Dining Area">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HTML + BOOTSTRAP: Menu Section ================= -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-4">Menu Highlights</h2>
+
+            <!-- ================= JAVASCRIPT: Filter Buttons ================= -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-dark m-1" onclick="filterMenu('all')">All</button>
+                <button class="btn btn-outline-dark m-1" onclick="filterMenu('coffee')">Coffee</button>
+                <button class="btn btn-outline-dark m-1" onclick="filterMenu('drinks')">Drinks</button>
+                <button class="btn btn-outline-dark m-1" onclick="filterMenu('food')">Food</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 menu-card coffee">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-mug-hot fa-3x text-gold mb-3"></i>
+                            <h5>Hot Coffee</h5>
+                            <p>Americano, Latte, Cappuccino, Spanish Latte, and more.</p>
+                            <span class="badge bg-dark">From 1.25 JD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 menu-card drinks">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-glass-water fa-3x text-gold mb-3"></i>
+                            <h5>Cold Drinks</h5>
+                            <p>Iced tea, mojitos, milkshakes, and cold coffee.</p>
+                            <span class="badge bg-dark">From 2.00 JD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 menu-card food">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <i class="fa-solid fa-burger fa-3x text-gold mb-3"></i>
+                            <h5>Food & Snacks</h5>
+                            <p>Pizza, sandwiches, breakfast, salads, and student meals.</p>
+                            <span class="badge bg-dark">Student Prices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h4 class="mb-3">Original Menu Image</h4>
+                <img src="assets/menu.webp" class="img-fluid rounded shadow menu-image" alt="Arab Cafe Menu">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BOOTSTRAP: Services Cards ================= -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-4">Cafe Features</h2>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h5>Delivery</h5>
+                        <p>Delivery service is available for students.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-chair"></i>
+                        <h5>Indoor Seating</h5>
+                        <p>Comfortable indoor seating inside the university.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-bowling-ball"></i>
+                        <h5>Billiard Tables</h5>
+                        <p>Billiard tables are available for entertainment.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-wifi"></i>
+                        <h5>No Wi-Fi</h5>
+                        <p>Wi-Fi service is not available at the cafe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HTML + BOOTSTRAP + JAVASCRIPT: Reservation Form ================= -->
+    <section id="reservation" class="py-5 reservation-section">
+        <div class="container">
+            <h2 class="text-center section-title mb-4">Student Reservation</h2>
+
+            <form class="row g-3 reservation-form" onsubmit="submitReservation(event)">
+                <div class="col-md-6">
+                    <label class="form-label">Student Name</label>
+                    <input type="text" class="form-control" id="studentName" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Student ID</label>
+                    <input type="text" class="form-control" id="studentId" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Reservation Date</label>
+                    <input type="date" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Number of People</label>
+                    <input type="number" class="form-control" min="1" max="10" required>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Special Request</label>
+                    <textarea class="form-control" rows="3" placeholder="Example: quiet table, billiard area..."></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-gold px-5" type="submit">Submit Reservation</button>
+                </div>
+            </form>
+
+            <div id="reservationMessage" class="alert alert-success mt-4 d-none text-center"></div>
+        </div>
+    </section>
+
+    <!-- ================= Clear Section For Doctor ================= -->
+    <section id="technologies" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-4">Technologies Used</h2>
+            <p class="text-center mb-4">This section was added to clearly show the required technologies used in the project.</p>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="tech-box">
+                        <i class="fa-brands fa-html5"></i>
+                        <h4>HTML</h4>
+                        <p>Used for the website structure, sections, images, forms, menu, and footer.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="tech-box">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h4>CSS</h4>
+                        <p>Used for colors, layout, hover effects, hero section, dark mode style, and responsive design.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="tech-box">
+                        <i class="fa-brands fa-js"></i>
+                        <h4>JavaScript</h4>
+                        <p>Used for dark mode, menu filtering, and reservation confirmation.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="tech-box">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <h4>Bootstrap</h4>
+                        <p>Used for navbar, grid system, cards, buttons, forms, spacing, and responsive layout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HTML: Contact Footer ================= -->
+    <footer id="contact" class="footer py-5">
+        <div class="container">
+            <div class="row g-4 text-white">
+                <div class="col-md-4">
+                    <img src="assets/logo.png" class="footer-logo mb-3" alt="Arab Cafe Logo">
+                    <p>Arab Restaurant & Cafe inside Amman Arab University.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <p><i class="fa-solid fa-phone me-2"></i>0775600202</p>
+                    <p><i class="fa-solid fa-envelope me-2"></i>arap_cafe@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot me-2"></i>Building I - Amman Arab University</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Working Hours</h5>
+                    <p>Saturday - Thursday</p>
+                    <p>8:00 AM - 8:00 PM</p>
+                    <p>No outdoor seating - No Wi-Fi - Billiard tables available</p>
+                </div>
+            </div>
+
+            <hr class="text-white">
+            <p class="text-center text-white mb-0"> © 2026 Arab Restaurant & Cafe - Project By Anmar Al-Yazjeen / Student of Dr. Lara Al-Shboul </p>
+        </div>
+    </footer>
+
+    <!-- ================= BOOTSTRAP: JavaScript Bundle ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ================= JAVASCRIPT: Custom External JS ================= -->
+    <script src="script.js"></script>
+</body>
+</html>
